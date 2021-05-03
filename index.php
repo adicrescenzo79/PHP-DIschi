@@ -60,7 +60,7 @@
             <!-- SELECT -->
             <div class="playlist">
               <span class="text-uppercase">choose your artist</span>
-                <select v-model="artistChosen" class="" name="">
+                <select @change="search()" v-model="artistChosen" class="" name="">
                   <option value="">All Artists</option>
                   <option v-for="artist in artists" >{{artist}}</option>
                 </select>
@@ -92,10 +92,10 @@
 
           <div id="central">
 
-            <nav class="text-uppercase">
+            <!-- <nav class="text-uppercase">
               <a @click="artistChosen = ''" href="#">ALL ARTISTS</a>
               <a @click="artistChosen = artist" v-for="artist in artists" href="#">{{artist}}</a>
-            </nav>
+            </nav> -->
             <!-- LISTA DISCHI -->
             <div id="recenti">
                   <div class="dischi">

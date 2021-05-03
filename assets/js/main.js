@@ -3,6 +3,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: '#root',
   data: {
+    allDisks: [],
     disks: [],
     infoIndex: '',
     info: false,
@@ -15,7 +16,9 @@ var app = new Vue({
     .then((response) => {
       let result = response.data;
 
-      this.disks = this.sortedResult(result);
+      this.allDisks = this.sortedResult(result);
+
+      this.disks = this.allDisks;
 
       for (var i = 0; i < response.data.length; i++) {
         let artist = response.data[i].author;
@@ -39,6 +42,21 @@ var app = new Vue({
       return arr.slice().sort(function(a, b) {
         return a.year - b.year;
       });
+    },
+    search: function(){
+      if (this.artistChosen) {
+        axios
+        .get(`http://localhost/php-ajax-dischi/search_artist.php?artist=${this.artistChosen}`)
+        .then((response) => {
+          let result = response.data;
+          // console.log(result);
+          this.disks = this.sortedResult(result);
+
+        });
+      } else {
+        this.disks = this.allDisks;
+
+      }
     }
 
   },
