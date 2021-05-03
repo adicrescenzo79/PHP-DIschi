@@ -59,10 +59,10 @@
             </div>
             <!-- SELECT -->
             <div class="playlist">
-              <span class="text-uppercase">choose your genre</span>
-                <select v-model="genreChosen" class="" name="">
-                  <option value="">All Genres</option>
-                  <option v-for="genre in genres" >{{genre}}</option>
+              <span class="text-uppercase">choose your artist</span>
+                <select v-model="artistChosen" class="" name="">
+                  <option value="">All Artists</option>
+                  <option v-for="artist in artists" >{{artist}}</option>
                 </select>
 
             </div>
@@ -93,14 +93,13 @@
           <div id="central">
 
             <nav class="text-uppercase">
-              <a @click="genreChosen = ''" href="#">ALL GENRES</a>
-              <a @click="genreChosen = genre" v-for="genre in genres" href="#">{{genre}}</a>
+              <a @click="artistChosen = ''" href="#">ALL ARTISTS</a>
+              <a @click="artistChosen = artist" v-for="artist in artists" href="#">{{artist}}</a>
             </nav>
             <!-- LISTA DISCHI -->
             <div id="recenti">
                   <div class="dischi">
                     <div
-                      v-if="disk.genre.includes(genreChosen)"
                       @click="getInfo(i)"
                       class="disco"
                       v-for="(disk, i) in disks">

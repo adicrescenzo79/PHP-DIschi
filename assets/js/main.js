@@ -6,22 +6,21 @@ var app = new Vue({
     disks: [],
     infoIndex: '',
     info: false,
-    genres: [],
-    genreChosen: '',
+    artists: [],
+    artistChosen: '',
   },
   mounted() {
     axios
     .get('http://localhost/php-ajax-dischi/call.php')
     .then((response) => {
-      // console.log(response.data);
       let result = response.data;
 
       this.disks = this.sortedResult(result);
 
       for (var i = 0; i < response.data.length; i++) {
-        let genre = response.data[i].genre;
-        if (!(this.genres.includes(genre))) {
-          this.genres.push(genre);
+        let artist = response.data[i].author;
+        if (!(this.artists.includes(artist))) {
+          this.artists.push(artist);
         }
       };
 
