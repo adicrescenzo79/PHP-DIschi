@@ -1,0 +1,715 @@
+.debug header{
+  background-color: red;
+}
+
+.debug footer{
+  background-color: green;
+
+}
+
+.debug #central{
+  background-color: yellow;
+}
+
+.debug .disco{
+  background-color: purple;
+  height: 300px;
+}
+
+.debug aside{
+  background-color: blue;
+}
+
+.debug header #upgrade{
+  height: 50px;
+  width: 200px;
+  background-color: green;
+}
+
+.debug footer *{
+  background-color: cyan;
+  border: 1px solid black;
+  height: 50%;
+  width: 200px;
+}
+/* comuni */
+body{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+a{
+  color: rgba(255, 255, 255, 0.5);
+}
+.
+a:hover{
+  color: #fff;
+}
+
+a:focus,
+a:active{
+  border: none;
+  outline-style: none;
+}
+
+.white{
+  color: #fff;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.text-capitalize{
+  text-transform: capitalize;
+}
+
+
+.row{
+  margin: 0;
+}
+
+[class*="col-"]{
+  padding: 0;
+}
+
+#up{
+  display: flex;
+}
+
+.disk-info{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disk-info img{
+  height: 50%;
+}
+
+.disk-info .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 20px;
+  height: 50%;
+  position: relative;
+}
+
+.disk-info .info *{
+  margin: 20px;
+}
+
+.disk-info .info i{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  font-size: 40px;
+}
+
+.disk-info .info i:hover{
+  color: #ADFF2F;
+  cursor: pointer;
+}
+
+
+
+main{
+  width: calc(100vw - 200px);
+}
+
+aside{
+  width: 200px;
+  height: calc(100vh - 100px);
+  background-color: #000;
+  font-size: 11px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside .top{
+  overflow-y: hidden;
+  /* max-height: calc(100vh - 100 - 91); */
+}
+
+aside img.big{
+  width: 70%;
+  padding: 30px 0;
+}
+
+aside .fa-spotify{
+  display: none;
+}
+
+aside .menu{
+  display: flex;
+  flex-direction: column;
+}
+
+aside .menu a{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+aside a{
+  cursor: pointer;
+  padding: 5px;
+}
+
+aside img.big,
+aside a,
+aside .playlist span{
+  padding-left: 15px;
+}
+
+aside a:hover{
+  color: #fff;
+}
+
+aside a:active,
+aside a:focus,
+aside .home{
+  border-left: 2px solid #ADFF2F;
+  color: #fff;
+}
+
+
+aside .playlist{
+  display: flex;
+  overflow-y: auto;
+  max-height: 300px;
+  height: calc(100vh - 403px);
+  padding-top: 20px;
+
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+aside .playlist > *{
+  margin-bottom: 5px;
+}
+aside .playlist span:first-child{
+  color: #fff;
+}
+
+aside .playlist select{
+  margin: 0 auto;
+  width: 90%;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+aside .playlist a span{
+  font-size: 14px;
+}
+
+aside .playlist a i{
+  font-size: 37px;
+}
+
+aside .install,
+aside .profile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+aside span{
+  padding-left: 10px;
+}
+
+aside .bottom{
+  padding-bottom: 10px;
+  height: 91px;
+  /* position: fixed;
+  bottom: 100px; */
+  background-color: #000;
+  width: 200px;
+}
+
+aside .bottom .linea{
+  width: 170px;
+  margin: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+aside a.profile i{
+  font-size: 25px;
+  color: #fff;
+  background-color: #808080;
+  border-radius: 50%;
+}
+
+aside .profile span{
+  font-size: 14px;
+}
+
+header,
+footer{
+  height: 100px;
+}
+
+main{
+  height: calc(100vh - 100px);
+}
+
+header{
+  background-color: rgba(8, 11, 18, 0.5);
+  position: fixed;
+  width: calc(100vw - 200px);
+  z-index: 10;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#upgrade{
+  color: #fff;
+  margin-right: 20px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#upgrade:hover{
+  margin-right: 20px;
+  font-size: 17px;
+}
+
+
+#central{
+  padding-top: 100px;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  background-color: #141922;
+}
+
+#central nav{
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+#central nav a{
+  padding: 0 20px;
+}
+
+#central nav a:hover{
+  color: #fff;
+}
+
+#central nav a:after{
+  content: '';
+  width: 25px;
+  border: 1px solid #141922;
+  display: block;
+  margin: 2px auto 0;
+  text-align: center;
+}
+
+#central nav a:focus,
+#central nav a:active,
+#central nav a.selected{
+  color: #fff;
+}
+
+#central nav a:focus:after,
+#central nav a:active:after,
+#central nav a.selected:after{
+  border-color: #ADFF2F;
+}
+
+#central .sector{
+  margin-left: 17px;
+}
+
+#central .sector h2{
+  color: #fff;
+}
+
+#central .sector h2 + span{
+  font-size: 11px;
+}
+
+#central .dischi{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#central .disco{
+  margin: 10px;
+  text-align: center;
+
+  flex-shrink: 1;
+  width: calc(100% / 5 - 20px);
+}
+
+#central img{
+  width: 100%;
+}
+
+#central .play{
+  position: relative;
+}
+
+#central .middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: none;
+}
+
+#central .disco:hover{
+  cursor: pointer;
+}
+
+#central .disco:hover img{
+  opacity: 0.5;
+}
+
+#central .disco:hover .middle{
+  display: block;
+}
+
+#central i{
+  font-size: 60px;
+  color: #fff;
+}
+
+#central .title{
+  display: block;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+#central span{
+  margin-top: 10px;
+}
+
+#central .subtitle{
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+#central #popolari img{
+  border-radius: 50%;
+}
+
+footer{
+  background-color: #282828;
+  z-index: 200;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a:hover{
+  color: #fff;
+}
+
+footer span{
+  font-size: 9px;
+  padding-left: 5px;
+}
+
+footer .song,
+footer .vol{
+  width: 200px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .song img{
+  height: 50px;
+}
+
+footer .song i{
+  padding-left: 5px;
+}
+
+footer .song .cover{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .song .cover .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .song .cover .info span:last-of-type:hover{
+  text-decoration: underline;
+}
+
+footer .song .cover .like{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .player{
+  padding-top: 15px;
+  align-self: flex-start;
+  height: 70%;
+  min-width: 206px;
+  flex-shrink: 1;
+  flex-basis: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .player .commands{
+  font-size: 12px;
+  width: 206px;
+  align-self: center;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .player .commands a{
+  margin: 0 10px;
+}
+
+footer .player .commands .play{
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-70%);
+}
+
+footer .player .commands .play:hover{
+  font-size: 27px;
+}
+
+footer .player .duration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .player .duration,
+footer .vol .range{
+  cursor: pointer;
+}
+
+footer  .bar {
+  width: 100%;
+  margin: 0 10px;
+  position: relative;
+
+  display: flex;
+}
+
+footer  .bar .bar-left{
+  width: 20%;
+  border: 2px solid #C1C1C1;
+  border-radius: 20px;
+}
+
+footer .player .duration:hover .bar .bar-left,
+footer .vol .range:hover .bar .bar-left{
+  border: 2px solid #ADFF2F;
+
+}
+
+footer .bar .bar-right{
+  width: 80%;
+  border: 2px solid #5A5A5A;
+  border-radius: 0 20px 20px 0;
+}
+
+footer .player .duration:hover .bar .ball,
+footer .vol .range:hover .bar .ball{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20%;
+  transform: translateX(-50%);
+  bottom: -5px;
+}
+
+
+footer .vol{
+  font-size: 11px;
+  padding-right: 20px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .vol .range{
+  width: 50%;
+}
+
+footer .vol .range{
+  width: 90px;
+}
+
+footer .vol > a{
+  margin-left: 7.5px;
+}
+
+footer .vol input[type=range] {
+  width: 100px;
+  margin: 5.15px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+/* md */
+@media all and (max-width: 1199px){
+  [class*="col-"]{
+    height: 278px;
+  }
+
+}
+
+/* sm */
+@media all and (max-width: 991px){
+  [class*="col-"]{
+    height: auto;
+  }
+
+  #central nav{
+    height: 100px;
+  }
+
+  #central .disco{
+    margin: 10px;
+    text-align: center;
+
+    flex-shrink: 1;
+    width: calc(100% / 3 - 20px);
+  }
+
+
+}
+
+/* xs */
+
+@media all and (max-width: 767px){
+
+  .disk-info{
+    flex-direction: column;
+  }
+
+  .disk-info .info{
+    justify-content: flex-start;
+  }
+
+  .disk-info .info *{
+    margin: 5px;
+  }
+
+  .disk-info .info i {
+    font-size: 40px;
+    position: inherit;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  aside{
+    width: 50px;
+  }
+
+  aside img.big,
+  aside span,
+  aside .playlist,
+  aside .linea{
+    display: none;
+  }
+
+  aside .fa-spotify{
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    padding: 15px;
+  }
+
+  aside span{
+    display: none;
+  }
+
+  aside .playlist{
+    display: none;
+  }
+
+  aside .bottom{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  main{
+    width: calc(100vw - 50px);
+  }
+
+  header{
+    width: calc(100vw - 50px);
+  }
+
+  #central .disco{
+    margin: 10px;
+    text-align: center;
+
+    flex-shrink: 1;
+    width: calc(100% / 2 - 20px);
+  }
+
+  footer .player .duration{
+    padding-top: 30px;
+    width: 88%;
+    margin: 0 auto;
+  }
+
+  footer .player input[type=range] {
+    width: 60%;
+  }
+
+
+}
