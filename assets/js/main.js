@@ -11,14 +11,15 @@ var app = new Vue({
   },
   mounted() {
     axios
-    .get('https://flynn.boolean.careers/exercises/api/array/music')
+    .get('http://localhost/php-ajax-dischi/call.php')
     .then((response) => {
-      let result = response.data.response;
+      // console.log(response.data);
+      let result = response.data;
 
       this.disks = this.sortedResult(result);
 
-      for (var i = 0; i < response.data.response.length; i++) {
-        let genre = response.data.response[i].genre;
+      for (var i = 0; i < response.data.length; i++) {
+        let genre = response.data[i].genre;
         if (!(this.genres.includes(genre))) {
           this.genres.push(genre);
         }
